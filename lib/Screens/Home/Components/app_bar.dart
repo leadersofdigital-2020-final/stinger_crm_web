@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stinger_crm_web/Components/default_button.dart';
 import 'package:stinger_crm_web/Screens/account.dart';
 import 'package:stinger_crm_web/Screens/candidates.dart';
-import 'package:stinger_crm_web/Screens/requests.dart';
+import 'package:stinger_crm_web/Screens/Home/requests/requests.dart';
 import 'package:stinger_crm_web/Screens/vacancy.dart';
 import 'package:stinger_crm_web/Screens/Home/home_screen.dart';
 import 'menu_item.dart';
