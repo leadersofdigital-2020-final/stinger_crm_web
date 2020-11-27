@@ -24,14 +24,16 @@ class PlaceCard extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: isFullCard ? 1.09 : 1.29,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+            child: Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
+                  image: DecorationImage(
+                      image: AssetImage(travelSport.image), fit: BoxFit.cover),
                 ),
-                image: DecorationImage(
-                    image: AssetImage(travelSport.image), fit: BoxFit.cover),
               ),
             ),
           ),
