@@ -64,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   setState(() {
                     page_index = 1;
                   });
+                  
                 },
               ),
               MenuItem(
