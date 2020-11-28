@@ -127,7 +127,10 @@ class _TopTravelersState extends State<TopTravelers> {
   }
   Future<List<User>> obtainJson() async {
     if(canRequest){
-      final response = await http.get('http://127.0.0.1:8000/api/?format=json');
+      Map<String, String> headers = {
+        'Content-Type': 'application/json; charset=UTF-8',
+      };
+      final response = await http.get('http://127.0.0.1:8000/api/?format=json', headers: headers);
       dynamic jsonObject = convert.jsonDecode(response.body);
       //var jsonResponse = convert.jsonDecode(response.body);
       //final convertedJsonObject = jsonObject.cast<Map<String, dynamic>>();
