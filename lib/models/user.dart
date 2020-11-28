@@ -9,8 +9,9 @@ class User {
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
-      name: json['full_name'],
-      image: "assets/images/ава.jpg",
+      //name: json['full_name'],
+      name: "Влад",
+      image: "assets/images/man.jpg",
       stage: 2,
       vac: json["profession"],
       cell_number: json["experience"].toString(),
@@ -27,7 +28,7 @@ List<User> topTravelers = [user1, user2, user3, user4];
 User user1 = User(name: "Дык", image: "assets/images/дык.JPG", stage: 4, vac: "Flutter-разработчик", cell_number:"+79201337568", rating:4);
 User user2 = User(name: "Евгений", image: "assets/images/женя.JPG", stage: 3, vac: "Проектный менеджер", cell_number:"+79200006568", rating:4);
 User user3 = User(name: "Алексей", image: "assets/images/ава.jpg", stage: 2, vac: "ИИ-разработчик", cell_number:"+79202286568", rating:4);
-User user4 = User(name: "ПаВел", image: "assets/images/паша.JPG", stage: 1, vac: "Python-разработчик", cell_number:"+79050286560", rating:4);
+User user4 = User(name: "Павел", image: "assets/images/паша.JPG", stage: 1, vac: "Python-разработчик", cell_number:"+79050286560", rating:4);
 
 User user5 = User(name: "Социальный пакет", image: "assets/social.png");
 User user6 = User(name: "ДМС", image: "assets/medical.png");

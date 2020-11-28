@@ -12,17 +12,17 @@ class TopTravelers extends StatefulWidget {
   @override
   _TopTravelersState createState() => _TopTravelersState();
 }
-
+bool canRequest = true;
 class _TopTravelersState extends State<TopTravelers> {
   int page = -1;
   double font_size = 8;
-  bool canResponse = true;
+  
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: obtainJson(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-      print(obtainJson());
+      
       return Column(
         children: [
           //SectionTitle(title: "", press: () {}),
@@ -41,6 +41,7 @@ class _TopTravelersState extends State<TopTravelers> {
             child: page == -1
                 ? Wrap(                  
                       //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      runAlignment: WrapAlignment.spaceBetween,
                       spacing: getProportionateScreenWidth(14),
                       children: [
                         ...List.generate(
@@ -125,15 +126,18 @@ class _TopTravelersState extends State<TopTravelers> {
     
   }
   Future<List<User>> obtainJson() async {
-    if(canResponse){
+    if(canRequest){
       final response = await http.get('http://127.0.0.1:8000/api/?format=json');
       dynamic jsonObject = convert.jsonDecode(response.body);
       //var jsonResponse = convert.jsonDecode(response.body);
-      final convertedJsonObject = jsonObject.cast<Map<String, dynamic>>();
-      topTravelers +=
-          convertedJsonObject.map<User>((json) => User.fromJson(json)).toList();
-      print(topTravelers[0]);
-      canResponse=false;
+      //final convertedJsonObject = jsonObject.cast<Map<String, dynamic>>();
+      //topTravelers +=  convertedJsonObject.map<User>((json) => User.fromJson(json)).toList();
+      jsonObject.forEach(
+        (elem) {
+          topTravelers += [User.fromJson(elem)];
+          }
+      );
+      canRequest=false;
       }
 
       //return list;
