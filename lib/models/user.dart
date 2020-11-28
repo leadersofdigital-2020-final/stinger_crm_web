@@ -2,19 +2,30 @@
 import 'package:flutter/material.dart';
 
 class User {
-  final String name, image, vac, cell_number;
-  final int stage, rating;
+  final String name, image, profession, phone, schedule, employment, education, salary, skills, achievements, expactations, add_info, feedback, date;                      
+  final int stage, experience, rating;
 
-  User({@required this.name, @required this.image, this.stage, this.vac, this.cell_number, this.rating});
+  User({@required this.name, @required this.image,this.stage,this.schedule, this.employment, this.education, this.salary, this.experience, this.skills, this.achievements, this.expactations, this.add_info, this.feedback, this.date, this.profession, this.phone, this.rating});
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       //name: json['full_name'],
       name: "Влад",
       image: "assets/images/man.jpg",
-      stage: 2,
-      vac: json["profession"],
-      cell_number: json["experience"].toString(),
+      stage: 3,
+      profession: json["profession"],      
+      schedule: json["schedule"],
+      employment: json["employment"],
+      education: json["education"],
+      salary: json["salary"],
+      experience: json["experience"],
+      skills: json["skills"],
+      achievements: json["achievements"],
+      expactations: json["expactations"],
+      add_info: json["add_info"],
+      feedback: json["feedback"],
+      date: json["date"],
+      phone: "+7 903 228 65 68",
       rating: 3
     );
   }
@@ -25,10 +36,10 @@ List<User> topTravelers = [user1, user2, user3, user4];
 
 // demo user
 
-User user1 = User(name: "Дык", image: "assets/images/дык.JPG", stage: 4, vac: "Flutter-разработчик", cell_number:"+79201337568", rating:4);
-User user2 = User(name: "Евгений", image: "assets/images/женя.JPG", stage: 3, vac: "Проектный менеджер", cell_number:"+79200006568", rating:4);
-User user3 = User(name: "Алексей", image: "assets/images/ава.jpg", stage: 2, vac: "ИИ-разработчик", cell_number:"+79202286568", rating:4);
-User user4 = User(name: "Павел", image: "assets/images/паша.JPG", stage: 1, vac: "Python-разработчик", cell_number:"+79050286560", rating:4);
+User user1 = User(name: "Дык", image: "assets/images/дык.JPG", stage: 4, profession: "Flutter-разработчик", phone:"+79201337568", rating:4);
+User user2 = User(name: "Евгений", image: "assets/images/женя.JPG", stage: 3, profession: "Проектный менеджер", phone:"+79200006568", rating:4);
+User user3 = User(name: "Алексей", image: "assets/images/ава.jpg", stage: 2, profession: "ИИ-разработчик", phone:"+79202286568", rating:4);
+User user4 = User(name: "Павел", image: "assets/images/паша.JPG", stage: 1, profession: "Python-разработчик", phone:"+79050286560", rating:4);
 
 User user5 = User(name: "Социальный пакет", image: "assets/social.png");
 User user6 = User(name: "ДМС", image: "assets/medical.png");

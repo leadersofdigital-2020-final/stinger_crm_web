@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stinger_crm_web/Screens/candidates/video_player.dart';
 import 'top_travellers.dart';
 import 'package:stinger_crm_web/size_config.dart';
 
@@ -23,8 +24,7 @@ class _CandidatesState extends State<Candidates> {
               HomeHeaderC(),
               VerticalSpacing(),
               TopTravelers(),
-              VerticalSpacing(),
-              
+              VerticalSpacing(),            
             ],
           ),
         ),

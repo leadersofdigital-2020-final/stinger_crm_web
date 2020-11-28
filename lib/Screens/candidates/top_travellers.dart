@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stinger_crm_web/Screens/candidates/video_player.dart';
 import '../../widgets/section_title.dart';
 import '../../models/user.dart';
 import 'package:http/http.dart' as http;
@@ -86,7 +87,7 @@ class _TopTravelersState extends State<TopTravelers> {
                                     style: TextStyle(
                                         fontSize: getProportionateScreenWidth(
                                             font_size))),
-                                Text(topTravelers[page].cell_number.toString(),
+                                Text(topTravelers[page].phone.toString(),
                                     style: TextStyle(
                                         fontSize: getProportionateScreenWidth(
                                             font_size))),
@@ -94,7 +95,7 @@ class _TopTravelersState extends State<TopTravelers> {
                                     style: TextStyle(
                                         fontSize: getProportionateScreenWidth(
                                             font_size))),
-                                Text(topTravelers[page].vac.toString(),
+                                Text(topTravelers[page].profession.toString(),
                                     style: TextStyle(
                                         fontSize: getProportionateScreenWidth(
                                             font_size))),
@@ -116,6 +117,7 @@ class _TopTravelersState extends State<TopTravelers> {
                           )
                         ],
                       ),
+                      VideoApp()
                     ],
                   ),
           )
