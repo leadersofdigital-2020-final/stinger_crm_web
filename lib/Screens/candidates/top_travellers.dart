@@ -117,7 +117,7 @@ class _TopTravelersState extends State<TopTravelers> {
                           )
                         ],
                       ),
-                      VideoApp()
+                      topTravelers[page].name=="Евгений"? VideoApp(): Container()
                     ],
                   ),
           )

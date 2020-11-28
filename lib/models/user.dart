@@ -2,17 +2,18 @@
 import 'package:flutter/material.dart';
 
 class User {
-  final String name, image, profession, phone, schedule, employment, education, salary, skills, achievements, expactations, add_info, feedback, date;                      
+  final String video, name, image, profession, phone, schedule, employment, education, salary, skills, achievements, expactations, add_info, feedback, date;                      
   final int stage, experience, rating;
 
-  User({@required this.name, @required this.image,this.stage,this.schedule, this.employment, this.education, this.salary, this.experience, this.skills, this.achievements, this.expactations, this.add_info, this.feedback, this.date, this.profession, this.phone, this.rating});
+  User({@required this.name, @required this.image,this.video,this.stage,this.schedule, this.employment, this.education, this.salary, this.experience, this.skills, this.achievements, this.expactations, this.add_info, this.feedback, this.date, this.profession, this.phone, this.rating});
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       //name: json['full_name'],
       name: "Влад",
-      image: "assets/images/man.jpg",
-      stage: 3,
+      image: json["image"],
+      video: json["video"],
+      stage: json["stage"],
       profession: json["profession"],      
       schedule: json["schedule"],
       employment: json["employment"],
@@ -25,8 +26,8 @@ class User {
       add_info: json["add_info"],
       feedback: json["feedback"],
       date: json["date"],
-      phone: "+7 903 228 65 68",
-      rating: 3
+      phone: json["phone"],
+      rating: json["rating"]
     );
   }
 }
