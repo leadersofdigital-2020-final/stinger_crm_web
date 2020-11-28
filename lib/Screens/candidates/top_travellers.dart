@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../widgets/section_title.dart';
-import '../../../models/user.dart';
+import '../../widgets/section_title.dart';
+import '../../models/user.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
+import '../../constants.dart';
+import '../../size_config.dart';
 
 
 class TopTravelers extends StatefulWidget{
