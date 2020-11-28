@@ -3,6 +3,7 @@ import '../models/travel_spot.dart';
 import '../models/user.dart';
 import '../constants.dart';
 import '../size_config.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PlaceCard extends StatelessWidget {
   const PlaceCard({

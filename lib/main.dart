@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/Home/home_screen.dart';
+import 'Screens/welcome_screen/welcome_screen.dart';
 import 'constant.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimaryColor,
       ),
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

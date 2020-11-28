@@ -4,7 +4,7 @@ import 'package:stinger_crm_web/Screens/Home/Components/body.dart';
 import 'package:stinger_crm_web/Screens/account.dart';
 import 'package:stinger_crm_web/Screens/candidates.dart';
 import 'package:stinger_crm_web/Screens/Home/requests/requests.dart';
-import 'package:stinger_crm_web/Screens/vacancy.dart';
+import 'package:stinger_crm_web/Screens/vacancy/vacancys.dart';
 
 import 'Components/menu_item.dart';
 
@@ -108,7 +108,7 @@ _body(int selectedIndex, Size size) {
       return Requests();
       break;
     case 2:
-      return Vacancy();
+      return Vacancys();
       break;
     case 3:
       return Candidates();

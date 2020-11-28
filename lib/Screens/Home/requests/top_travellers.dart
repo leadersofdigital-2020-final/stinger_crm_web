@@ -14,7 +14,7 @@ class TopTravelers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTitle(title: "Соискатели", press: () {}),
+        SectionTitle(title: "", press: () {}),
         VerticalSpacing(of: 20),
         Container(
           margin: EdgeInsets.symmetric(

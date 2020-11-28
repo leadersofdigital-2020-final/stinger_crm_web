@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stinger_crm_web/Components/default_button.dart';
 import 'package:stinger_crm_web/Screens/account.dart';
 import 'package:stinger_crm_web/Screens/candidates.dart';
-import 'package:stinger_crm_web/Screens/Home/requests/requests.dart';
-import 'package:stinger_crm_web/Screens/vacancy.dart';
-import 'package:stinger_crm_web/Screens/Home/home_screen.dart';
+import 'package:stinger_crm_web/Screens/vacancy/vacancys.dart';
 import 'menu_item.dart';
 
 class CustomAppBar extends StatefulWidget {
@@ -63,7 +60,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
             title: "Вакансии",
             press: () {Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Vacancy()),
+                            MaterialPageRoute(builder: (context) => Vacancys()),
                           );
                           },
           ),
