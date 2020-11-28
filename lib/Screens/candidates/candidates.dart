@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stinger_crm_web/Screens/Home/requests/top_travellers.dart';
+import 'top_travellers.dart';
 import 'package:stinger_crm_web/size_config.dart';
 
 import 'home_header_candidates.dart';

@@ -6,6 +6,17 @@ class User {
   final int stage, rating;
 
   User({@required this.name, @required this.image, this.stage, this.vac, this.cell_number, this.rating});
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      name: json['full_name'],
+      image: "assets/images/ава.jpg",
+      stage: 2,
+      vac: json["profession"],
+      cell_number: json["experience"].toString(),
+      rating: 3
+    );
+  }
 }
 
 // Demo List of Top Travelers

@@ -21,7 +21,7 @@ class _AccountState extends State<Account> {
               response = await http.get('http://127.0.0.1:8000/api/?format=json');
 
               var jsonResponse = convert.jsonDecode(response.body);
-              var id = jsonResponse[0];
+              var id = jsonResponse;
               print('$id.');
 
               print('${response.statusCode}.');
