@@ -75,6 +75,27 @@ List<TravelSpot> travelSpots2 = [
   ),
 ];
 
+List<TravelSpot> travelSpots3 = [
+  TravelSpot(
+    users: users..shuffle(),
+    name: "Flutter",
+    image: "assets/flutter.png",
+    date: DateTime(2020, 10, 15),
+  ),
+  TravelSpot(
+    users: users..shuffle(),
+    name: "TensoFlow",
+    image: "assets/tf.png",
+    date: DateTime(2020, 3, 10),
+  ),
+  TravelSpot(
+    users: users..shuffle(),
+    name: "Java",
+    image: "assets/images/java.jpg",
+    date: DateTime(2020, 10, 15),
+  ),
+];
+
 List<User> users = [user1, user2, user3];
 
 List<User> users2 = [user5, user6, user7, user8, user9, user10];

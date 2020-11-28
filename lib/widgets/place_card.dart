@@ -61,7 +61,7 @@ class PlaceCard extends StatelessWidget {
                     fontSize: isFullCard ? getProportionateScreenWidth(9) : getProportionateScreenWidth(7),
                   ),
                 ),
-                if (isFullCard)
+                /*if (isFullCard)
                   Text(
                     travelSport.date.day.toString(),
                     style: Theme.of(context)
@@ -72,7 +72,7 @@ class PlaceCard extends StatelessWidget {
                 if (isFullCard)
                   Text(
                     "заявок",
-                  ),
+                  ),*/
                 VerticalSpacing(of: 10),
                 Travelers(
                   users: travelSport.users,

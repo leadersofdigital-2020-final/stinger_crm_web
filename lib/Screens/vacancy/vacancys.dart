@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../size_config.dart';
 import 'home_header.dart';
 import 'popular_places.dart';
-import 'top_travellers.dart';
 import '../../constants.dart';
 import 'package:page_transition/page_transition.dart';
 //import 'add_request/request.dart';
@@ -69,7 +68,7 @@ class _VacancysState extends State<Vacancys> with SingleTickerProviderStateMixin
           ),
         ),
       ),
-      floatingActionButton: GestureDetector(
+      /*floatingActionButton: GestureDetector(
         onTap: () {
           setState(() => hide = true);
           _scaleController.forward();
@@ -93,7 +92,7 @@ class _VacancysState extends State<Vacancys> with SingleTickerProviderStateMixin
                   ),
               )
         )
-      ),
+      ),*/
     );
   }
 }

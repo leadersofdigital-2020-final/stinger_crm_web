@@ -29,12 +29,12 @@ class PopularPlacesV extends StatelessWidget {
           child: Row(
             children: [
               ...List.generate(
-                travelSpots.length,
+                travelSpots3.length,
                     (index) => Padding(
                   padding: EdgeInsets.only(
                       left: getProportionateScreenWidth(kDefaultPadding)),
                   child: PlaceCard(
-                    travelSport: travelSpots[index],
+                    travelSport: travelSpots3[index],
                     press: () {},
                   ),
                 ),
