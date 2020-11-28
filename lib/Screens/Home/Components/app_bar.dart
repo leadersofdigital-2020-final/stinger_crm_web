@@ -29,11 +29,6 @@ class _CustomAppBarState extends State<CustomAppBar> {
       ),
       child: Row(
         children: <Widget>[
-          Image.asset(
-            "assets/images/logo.png",
-            height: 25,
-            alignment: Alignment.topCenter,
-          ),
           SizedBox(width: 5),
           Text(
             "HR вок".toUpperCase(),

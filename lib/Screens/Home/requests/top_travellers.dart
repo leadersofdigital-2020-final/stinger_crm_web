@@ -67,22 +67,24 @@ class _TopTravelersState extends State<TopTravelers> {
                           });
                         },
                       ),
-                      Column(
-                        children: [
-                          Text("Имя:", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text(topTravelers[page].name.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text("Номер телефона:", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text(topTravelers[page].cell_number.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text("Вакансия:", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text(topTravelers[page].vac.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          Text("Этап: "+topTravelers[page].stage.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),                      
-                          Text("Рекомендованность: "+topTravelers[page].rating.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
-                          
-                        ],
+                      Container(
+                        child: Column(                         
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Имя: "+topTravelers[page].name.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),                            
+                            Text("Номер телефона:", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
+                            Text(topTravelers[page].cell_number.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
+                            Text("Вакансия:", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
+                            Text(topTravelers[page].vac.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
+                            Text("Этап: "+topTravelers[page].stage.toString()+"/5", style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),                      
+                            Text("Рекомендованность: "+topTravelers[page].rating.toString(), style: TextStyle(fontSize:getProportionateScreenWidth(font_size))),
+                            
+                          ],
+                        ),
                       )
                   ],
                 ),
-                
+
               ],
             ),
             
