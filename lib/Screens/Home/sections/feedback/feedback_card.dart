@@ -68,6 +68,16 @@ class _FeedbackCardState extends State<FeedbackCard> {
                 height: 1.5,
               ),
             ),
+            Text(
+              feedbacks[widget.index].salary.toString() + " руб.",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 18,
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.italic,
+                height: 1.5,
+              ),
+            ),
             SizedBox(height: kDefaultPadding * 2),
             Text(
               feedbacks[widget.index].profession,
