@@ -55,8 +55,8 @@ class _RequestsState extends State<Requests> with SingleTickerProviderStateMixin
     SizeConfig().init(context);
     return Column(
       children: [
-        HomeHeader(),
-        VerticalSpacing(),
+        //HomeHeader(),
+        //VerticalSpacing(),
         PopularPlaces(),
         VerticalSpacing(),
       ],
