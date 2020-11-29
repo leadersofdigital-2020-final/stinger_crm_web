@@ -45,6 +45,7 @@ class _LargeScreenState extends State<LargeScreen> {
                                 Icons.arrow_back_ios
                             ),
                           ),
+                          SizedBox(height: 10),                        
                           Text(topTravelers[widget.index].name,
                             style: TextStyle(
                               fontSize: 20,
