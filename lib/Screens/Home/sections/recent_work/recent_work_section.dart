@@ -8,9 +8,10 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'recent_work_card.dart';
 
-bool canRequest = true;
+
 
 class RecentWorkSection extends StatelessWidget {
+  bool canRequest = true;
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

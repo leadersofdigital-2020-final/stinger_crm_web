@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stinger_crm_web/models/user.dart';
-import '../../../../models/RecentWork.dart';
+
 import '../user_card/user_card.dart';
 import '../../../../constants.dart';
 

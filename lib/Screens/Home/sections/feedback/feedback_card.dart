@@ -52,14 +52,12 @@ class _FeedbackCardState extends State<FeedbackCard> {
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 10),
                   boxShadow: [if (!isHover) kDefaultCardShadow],
-                  image: DecorationImage(
-                    image: AssetImage(feedbacks[widget.index].userPic),
-                  ),
+                  
                 ),
               ),
             ),
             Text(
-              feedbacks[widget.index].review,
+              feedbacks[widget.index].salary.toString(),
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 18,
@@ -70,7 +68,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
             ),
             SizedBox(height: kDefaultPadding * 2),
             Text(
-              feedbacks[widget.index].name,
+              feedbacks[widget.index].profession,
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],
