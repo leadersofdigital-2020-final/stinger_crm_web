@@ -52,7 +52,9 @@ class _FeedbackCardState extends State<FeedbackCard> {
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 10),
                   boxShadow: [if (!isHover) kDefaultCardShadow],
-                  
+                  image: DecorationImage(
+                    image: AssetImage(feedbacks[widget.index].image),
+                  ),
                 ),
               ),
             ),
