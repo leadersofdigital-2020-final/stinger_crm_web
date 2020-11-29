@@ -53,48 +53,13 @@ class _RequestsState extends State<Requests> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      body: SingleChildScrollView(
-        clipBehavior: Clip.none,
-        child: SafeArea(
-          top: false,
-          child: Column(
-            children: [
-              HomeHeader(),
-              VerticalSpacing(),
-              PopularPlaces(),
-              VerticalSpacing(),
-              
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: GestureDetector(
-        onTap: () {
-          setState(() => hide = true);
-          _scaleController.forward();
-        },
-        child: AnimatedBuilder(
-          animation: _scaleController,
-          builder: (context, child) =>
-              Transform.scale(
-                  scale: _scaleAnimation.value,
-                  child: Container(
-                    padding: EdgeInsets.zero,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(60),
-                      color: kPrimaryColor,
-                    ),
-                    child: hide ? Container() : Icon(
-                      Icons.add,
-                      size: getProportionateScreenWidth(35),
-                      color: Colors.white,
-                    ),
-                  ),
-              )
-        )
-      ),
+    return Column(
+      children: [
+        HomeHeader(),
+        VerticalSpacing(),
+        PopularPlaces(),
+        VerticalSpacing(),
+      ],
     );
   }
 }

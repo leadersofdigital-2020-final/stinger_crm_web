@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import '../../size_config.dart';
 
 class VideoApp extends StatefulWidget {
+  final String video_link;
+
+  const VideoApp({Key key, this.video_link}) : super(key: key);
+
   @override
   _VideoAppState createState() => _VideoAppState();
 }
@@ -16,7 +20,7 @@ class _VideoAppState extends State<VideoApp> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network("assets/resume.mp4")
+    _controller = VideoPlayerController.network(widget.video_link)
       ..addListener(() => setState(() {
             videoPosition = _controller.value.position;
           }))
@@ -31,7 +35,7 @@ class _VideoAppState extends State<VideoApp> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      //height: getProportionateScreenWidth(200),
+      //height: getProportionateScreenWidth(100),
       padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(40), vertical: getProportionateScreenWidth(20)),
       child: SingleChildScrollView(
             child: Column(

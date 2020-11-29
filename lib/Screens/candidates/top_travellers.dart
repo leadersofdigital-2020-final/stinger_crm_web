@@ -133,12 +133,9 @@ class _TopTravelersState extends State<TopTravelers> {
         'Content-Type': 'application/json; charset=UTF-8',
       };
       final response = await http.get('http://127.0.0.1:8000/api/?format=json', headers: headers);
-      //utf8.decode(response.bodyBytes);
-      //dynamic jsonObject =convert.jsonDecode(response.body);
+      
       dynamic jsonObject =convert.jsonDecode(utf8.decode(response.bodyBytes));
-      //var jsonResponse = convert.jsonDecode(response.body);
-      //final convertedJsonObject = jsonObject.cast<Map<String, dynamic>>();
-      //topTravelers +=  convertedJsonObject.map<User>((json) => User.fromJson(json)).toList();
+
       jsonObject.forEach(
         (elem) {
           topTravelers += [User.fromJson(elem)];
