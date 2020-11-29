@@ -59,7 +59,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
               ),
             ),
             Text(
-              feedbacks[widget.index].salary.toString(),
+              feedbacks[widget.index].skills.toString(),
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 18,

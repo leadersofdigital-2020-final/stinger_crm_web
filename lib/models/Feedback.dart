@@ -32,21 +32,21 @@ List<FeedBack> feedbacks = [
     image: "assets/images/js.png",
     profession: "ReactJS разработчик",
     salary: 30000,
-    
+    skills: "Git, Javascript, jsx",
     color: Color(0xFFFFF3DD),
   ),
   FeedBack(
     image:"assets/images/java.jpg",
     profession: "Java разработчик",
     salary: 40000,
-    
+    skills: "Java, Git, Kotlin",
     color: Color(0xFFD9FFFC),
   ),
   FeedBack(
     image:"assets/images/python.png",
     profession: "Python Django разработчик",
     salary: 35000,
-    
+    skills: "Git, python, http",
     color: Color(0xFFFFE0E0),
   ),
 ];
